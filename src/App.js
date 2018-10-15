@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route } from 'react-router-dom';
+import HomePage from './components/pages/HomePage';
 
-// Refactored class component to functional component.
 const App = () => {
   return(
-    <div>Hello, world.</div>
+    <div>
+      <Route path="/" exact component={HomePage} />
+    </div>
   )
 }
 
