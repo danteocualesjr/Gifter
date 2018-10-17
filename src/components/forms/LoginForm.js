@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Button } from 'semantic-ui-react';
 
-class LoginForm extends from Component {
+class LoginForm extends Component {
     state = {
         data: {
             email: '',
