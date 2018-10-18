@@ -31,6 +31,16 @@ class LoginForm extends Component {
                         value={data.email}
                         onChange={this.onChange}
                 </Form.Field>
+                <Form.Field>
+                    <label htmlFor='password'>Password</label>
+                    <input 
+                        type='password' 
+                        id='password' 
+                        name='password' 
+                        placeholder='Must be at least 8 characters.' />
+                        value={data.password}
+                        onChange={this.onChange}
+                </Form.Field>                
                 <Button primary>Login</Button>
             </Form>
         );
