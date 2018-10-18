@@ -16,11 +16,15 @@ class LoginForm extends Component {
             data: { ...this.state.data, [e.target.name]: e.target.value }
         });
 
+    onSubmit = () => {
+
+    }
+
     render() {
         const { data } = this.state;
 
         return (
-            <Form>
+            <Form onSubmit={this.onSubmit}>
                 <Form.Field>
                     <label htmlFor='email'>Email</label>
                     <input 
