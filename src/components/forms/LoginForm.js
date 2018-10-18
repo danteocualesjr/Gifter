@@ -11,8 +11,14 @@ class LoginForm extends Component {
         errors: {}
     };
 
+    onChange = e =>
+        this.setState({
+            data: { ...this.state.data, [e.target.name]: e.target.value }
+        });
+
     render() {
         const { data } = this.state;
+
         return (
             <Form>
                 <Form.Field>
