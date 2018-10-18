@@ -21,6 +21,12 @@ class LoginForm extends Component {
         this.setState({ errors });
     };
 
+    validate = (data) => {
+        const errors = {};
+        if (!data.password) errors.password = "Invalid password";
+        return errors;
+    }
+
     render() {
         const { data } = this.state;
 
