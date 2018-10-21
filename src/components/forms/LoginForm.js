@@ -32,6 +32,7 @@ class LoginForm extends Component {
 
         return (
             <Form onSubmit={this.onSubmit}>
+                <div className="emailField">
                 <Form.Field>
                     <label htmlFor='email'>Email</label>
                     <input 
@@ -43,6 +44,7 @@ class LoginForm extends Component {
                         onChange={this.onChange}
                     />
                 </Form.Field>
+                </div>
                 <Form.Field>
                     <label htmlFor='password'>Password</label>
                     <input 
