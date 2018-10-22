@@ -58,7 +58,7 @@ class LoginForm extends Component {
                     />
                 </Form.Field>
                 </div>                
-                <Button primary>Login</Button>
+                <Button primary>Log in</Button>
             </Form>
         );
     }
