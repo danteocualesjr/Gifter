@@ -39,7 +39,7 @@ class LoginForm extends Component {
                         type='email' 
                         id='email' 
                         name='email' 
-                        placeholder='you@gifter.com'
+                        placeholder='Enter email here'
                         value={data.email}
                         onChange={this.onChange}
                     />
@@ -52,7 +52,7 @@ class LoginForm extends Component {
                         type='password' 
                         id='password' 
                         name='password' 
-                        placeholder='Must be at least 8 characters.'
+                        placeholder='Enter password here.'
                         value={data.password}
                         onChange={this.onChange}
                     />
