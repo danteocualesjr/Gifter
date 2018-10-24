@@ -2,6 +2,10 @@ import React from 'react';
 import LoginForm from '../forms/LoginForm';
 
 class LoginPage extends Component {
+    submit = data => {
+        console.log(data);
+    };
+
     render() {
         return (
             <div className="div">
@@ -9,7 +13,7 @@ class LoginPage extends Component {
             
                 <LoginForm submit={this.submit} />
             </div>
-        )
+        );
     }
 }
 
