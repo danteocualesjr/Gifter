@@ -31,12 +31,13 @@ class LoginForm extends Component {
     }
 
     render() {
-        const { data } = this.state;
+        const { data, errors } = this.state;
 
         return (
             <Form onSubmit={this.onSubmit}>
                 <div className="emailField">
-                <Form.Field>
+                {/* Converting it to Boolean. */}
+                <Form.Field error={!!errors.email}>
                     <label htmlFor='email'>Email</label>
                     <input 
                         type='email' 
@@ -46,10 +47,12 @@ class LoginForm extends Component {
                         value={data.email}
                         onChange={this.onChange}
                     />
+                    {errors.email && <InlineError text={errors.email} />}
                 </Form.Field>
                 </div>
                 <div className="passwordField">
-                <Form.Field>
+                {/* Converting it to Boolean. */}
+                <Form.Field error={!!errors.password}>
                     <label htmlFor='password'>Password</label>
                     <input 
                         type='password' 
@@ -59,6 +62,7 @@ class LoginForm extends Component {
                         value={data.password}
                         onChange={this.onChange}
                     />
+                    {errors.password && <InlineError text={errors.password} />}
                 </Form.Field>
                 </div>                
                 <Button primary>Log in</Button>
