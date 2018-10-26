@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Form, Button } from 'semantic-ui-react';
+import { Form, Button, Message } from 'semantic-ui-react';
 import Validator from 'validator';
 import InlineError from '../messages/InlineError';
 
@@ -42,6 +42,12 @@ class LoginForm extends Component {
         return (
             <Form onSubmit={this.onSubmit}>
                 <div className="emailField">
+                {errors.global && (
+                    <Message negative>
+                        <Message.Header>Ooopppsss! Something went wrong.</Message.Header>
+                        <p>{errors.global}</p>
+                    </Message>
+                )}
                 {/* Converting it to Boolean. */}
                 <Form.Field error={!!errors.email}>
                     <label htmlFor='email'>Email</label>
