@@ -40,6 +40,7 @@ class LoginForm extends Component {
     }
 
     // Debug starting from line 47...
+    // Bug: error appears after entering email address and password and clicking "log in".
 
     render() {
         const { data, errors, loading } = this.state;
