@@ -39,12 +39,13 @@ class LoginForm extends Component {
         return errors;
     }
 
+    // Debug starting from line 47...
+
     render() {
         const { data, errors, loading } = this.state;
 
         return (
             <Form onSubmit={this.onSubmit} loading={loading}>
-                <div className="emailField">
                 {errors.global && (
                     <Message negative>
                         <Message.Header>Ooopppsss! Something went wrong.</Message.Header>
@@ -64,7 +65,6 @@ class LoginForm extends Component {
                     />
                     {errors.email && <InlineError text={errors.email} />}
                 </Form.Field>
-                </div>
                 <div className="passwordField">
                 {/* Converting it to Boolean. */}
                 <Form.Field error={!!errors.password}>
