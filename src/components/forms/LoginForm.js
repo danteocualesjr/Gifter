@@ -32,12 +32,12 @@ class LoginForm extends Component {
         }
     };
 
-    validate = (data) => {
+    validate = data => {
         const errors = {};
         if (!Validator.isEmail(data.email)) errors.email = "Invalid email and/or password.";
         if (!data.password) errors.password = "Invalid email and/or password.";
         return errors;
-    }
+    };
 
     render() {
         const { data, errors, loading } = this.state;
@@ -63,7 +63,6 @@ class LoginForm extends Component {
                     />
                     {errors.email && <InlineError text={errors.email} />}
                 </Form.Field>
-                <div className="passwordField">
                 {/* Converting it to Boolean. */}
                 <Form.Field error={!!errors.password}>
                     <label htmlFor='password'>Password</label>
@@ -77,7 +76,6 @@ class LoginForm extends Component {
                     />
                     {errors.password && <InlineError text={errors.password} />}
                 </Form.Field>
-                </div>                
                 <Button primary>Log in</Button>
             </Form>
         );
