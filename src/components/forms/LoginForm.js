@@ -4,8 +4,6 @@ import { Form, Button, Message } from 'semantic-ui-react';
 import Validator from 'validator';
 import InlineError from '../messages/InlineError';
 
-// Debug this component...
-
 class LoginForm extends Component {
     state = {
         data: {
@@ -59,7 +57,7 @@ class LoginForm extends Component {
                         type='email' 
                         id='email' 
                         name='email' 
-                        placeholder='Enter email here'
+                        placeholder='your@email.com'
                         value={data.email}
                         onChange={this.onChange}
                     />
