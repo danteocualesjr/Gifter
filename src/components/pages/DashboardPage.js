@@ -1,11 +1,22 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const Dashboard = () => {
+const DashboardPage = () => {
     return (
         <div>
-            <h1>Welcome to your Dashboard</h1>
+            {!isConfirmed && <ConfirmEmailMessage />}
         </div>
     )
+};
+
+DashboardPage.propTypes = {
+    isConfirmed: PropTypes.bool.isRequired
+};
+
+function mapStateToProps(state) {
+    return {
+        isConfirmed: !!state.user.confirmed
+    }
 }
 
-export default Dashboard;
+export default connect(mapStateToProps)(DashboardPage);
