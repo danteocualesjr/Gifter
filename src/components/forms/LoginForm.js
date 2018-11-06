@@ -46,7 +46,7 @@ class LoginForm extends Component {
             <Form onSubmit={this.onSubmit} loading={loading}>
                 {errors.global && (
                     <Message negative>
-                        <Message.Header>Ooopppsss! Something went wrong.</Message.Header>
+                        <Message.Header>Something went wrong.</Message.Header>
                         <p>{errors.global}</p>
                     </Message>
                 )}
