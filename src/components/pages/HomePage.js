@@ -15,7 +15,8 @@ const HomePage = ({ isAuthenticated, logout }) => {
 };
 
 HomePage.propTypes = {
-    isAuthenticated: PropTypes.bool.isRequired
+    isAuthenticated: PropTypes.bool.isRequired,
+    logout: PropTypes.func.isRequired
 };
 
 function mapStateToProps(state) {
