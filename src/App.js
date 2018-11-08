@@ -6,14 +6,24 @@ import DashboardPage from './components/pages/DashboardPage';
 import UserRoute from './components/routes/UserRoute';
 import GuestRoute from './components/routes/GuestRoute';
 
-const App = () => {
-  return(
+const App = ({ location }) => {
+  return( 
     <div className="ui container">
-      <Route path="/" exact component={HomePage} />
-      <GuestRoute path="/login" exact component={LoginPage} />
-      <UserRoute path="/dashboard" exact component={DashboardPage} />
+      <Route location={location} path="/" exact component={HomePage} />
+      <GuestRoute location={location} path="/login" exact component={LoginPage} />
+      <UserRoute 
+        location={location} 
+        path="/dashboard" 
+        exact component={DashboardPage} 
+      />
     </div>
   )
 }
+
+App.propTypes = {
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired
+  }).isRequired
+};
 
 export default App;
