@@ -1,8 +1,8 @@
 import React from 'react';
 
-const UserRoute = () => {
+const UserRoute = ({ component: Component, ...rest }) => {
     return (
-        <div></div>
+        <Route {...rest} render={props => <Component {...props} />} />
     )
 };
 
