@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { Route } from 'react-router-dom';
 
 const UserRoute = ({ component: Component, ...rest }) => {
@@ -12,4 +13,10 @@ UserRoute.propTypes = {
     component: PropTypes.func.isRequired
 };
 
-export default UserRoute;
+function mapStateToProps(state) {
+    return {
+        isAuthenticated: !!state.user.token
+    }
+}
+
+export default connect(mapStateToProps)(UserRoute);
