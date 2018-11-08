@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import ConfirmEmailMessage from '../messages/ConfirmEmailMessage';
 
-const DashboardPage = () => {
+const DashboardPage = ({ isConfirmed }) => {
     return (
         <div>
             {!isConfirmed && <ConfirmEmailMessage />}
