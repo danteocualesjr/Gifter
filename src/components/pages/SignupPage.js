@@ -13,4 +13,11 @@ submit = data =>
     }
 }
 
+SignupPage.propTypes = {
+    history: PropTypes.shape({
+        push: PropTypes.func.isRequired
+    }).isRequired,
+    signup: PropTypes.func.isRequired
+};
+
 export default SignupPage;
