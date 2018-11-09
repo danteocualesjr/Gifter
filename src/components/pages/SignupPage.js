@@ -7,7 +7,7 @@ submit = data =>
     render() {
         return(
             <div>
-
+                <SignupForm submit={this.submit} />
             </div>
         )
     }
