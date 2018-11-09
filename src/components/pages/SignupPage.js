@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const SignupPage = () => {
-    return (
-        <div>
-            <p>Sign up here!</p>
-        </div>
-    )
+class SignupPage extends Component {
+submit = data =>
+    this.props.signup(data).then(() => this.props.history.push("/dashboard"));
+
+    render() {
+        return(
+            <div>
+
+            </div>
+        )
+    }
 }
 
 export default SignupPage;
