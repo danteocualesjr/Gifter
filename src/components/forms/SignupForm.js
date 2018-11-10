@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class SignupForm extends Component {
     state = {
@@ -11,6 +12,7 @@ class SignupForm extends Component {
     }
 
     render() {
+        const { data, errors, load } = this.state;
         return(
             <div>
 
@@ -18,5 +20,9 @@ class SignupForm extends Component {
         );
     }
 }
+
+SignupForm.propTypes = {
+    submit: PropTypes.func.isRequired
+};
 
 export default SignupForm;
