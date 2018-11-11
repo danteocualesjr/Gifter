@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Form, Button } from 'semantic-ui-react';
+import isEmail from 'validator/lib/isEmail';
+import InlineError from '../messages/InlineError';
 
 class SignupForm extends Component {
     state = {
@@ -29,7 +31,7 @@ class SignupForm extends Component {
         if (!IsEmail(data.email)) errors.email = "Invalid email";
         if (!data.password) errors.password = "Invalid password";
 
-        return errors.
+        return errors;
     }
 
     render() {
@@ -37,6 +39,20 @@ class SignupForm extends Component {
         return(
             <Form onSubmit={this.onSubmit} loading={loading}>
 
+                <Form.Field error={!!errors.email}>
+                    <label htmlFor="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="your@email.com"
+                        value={data.email}
+                        onChange={this.onChange}
+                    />
+                    {errors.email && <InlineError text={errors.email} />}
+                </Form.Field>
+
+                <Button primary>Sign up</Button>
             </Form>
         );
     }
