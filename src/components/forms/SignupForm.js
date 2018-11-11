@@ -23,6 +23,15 @@ class SignupForm extends Component {
         }
     }
 
+    validate = data => {
+        const errors = {};
+
+        if (!IsEmail(data.email)) errors.email = "Invalid email";
+        if (!data.password) errors.password = "Invalid password";
+
+        return errors.
+    }
+
     render() {
         const { data, errors, load } = this.state;
         return(
