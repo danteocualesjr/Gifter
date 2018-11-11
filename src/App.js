@@ -8,6 +8,8 @@ import SignupPage from './components/pages/SignupPage';
 import UserRoute from './components/routes/UserRoute';
 import GuestRoute from './components/routes/GuestRoute';
 
+// TODO: Double check for any missing components.
+
 const App = ({ location }) => {
   return( 
     <div className="ui container">
