@@ -52,6 +52,18 @@ class SignupForm extends Component {
                     {errors.email && <InlineError text={errors.email} />}
                 </Form.Field>
 
+                <Form.Field error={!!errors.password}>
+                    <label htmlFor="password">Email</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        value={data.password}
+                        onChange={this.onChange}
+                    />
+                    {errors.password && <InlineError text={errors.password} />}
+                </Form.Field>
+
                 <Button primary>Sign up</Button>
             </Form>
         );
