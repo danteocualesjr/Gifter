@@ -12,10 +12,10 @@ const HomePage = ({ isAuthenticated, logout }) => {
             {isAuthenticated ? (
                 <button onClick={() => logout()}>Logout</button>
             ) : ( 
-            <div><Link to="/login">Login</Link> or <Link to="/signup">Sign Up</div>
+            <div><Link to="/login">Login</Link> or <Link to="/signup">Sign Up</Link></div>
             )}
         </div>
-    )
+    );
 
 HomePage.propTypes = {
     isAuthenticated: PropTypes.bool.isRequired,
@@ -25,7 +25,7 @@ HomePage.propTypes = {
 function mapStateToProps(state) {
     return {
         isAuthenticated: !!state.user.token
-    }
+    };
 }
 
 export default connect(mapStateToProps, { logout: actions.logout })(HomePage);
