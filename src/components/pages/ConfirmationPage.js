@@ -8,7 +8,11 @@ class ConfirmationPage extends Component {
         success: false
     };
 
-    
+    componentDidMount() {
+        this.props.confirm(this.props.match.params.token)
+        .then(() => this.setState({ loading: false, success: true }))
+        .catch(() => this.setState({ loading: false, success: false }));
+    }
 
     render() {
         const { loading, success } = this.state;
