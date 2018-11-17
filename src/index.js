@@ -19,7 +19,11 @@ const store = createStore(
 
 if (localStorage.gifterJWT) {
     const payload = decode(localStorage.gifterJWT);
-    const user = { token: localStorage.gifterJWT };
+    const user = { 
+        token: localStorage.gifterJWT,
+        email: payload.email,
+        confirmed: payload.confirmed
+    };
     store.dispatch(userLoggedIn(user));
 }
 
