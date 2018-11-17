@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Message, Icon } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import { confirm } from '../../actions/auth';
 
 class ConfirmationPage extends Component {
     state = {
