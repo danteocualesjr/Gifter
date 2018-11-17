@@ -18,6 +18,7 @@ const store = createStore(
 );
 
 if (localStorage.gifterJWT) {
+    const payload = decode(localStorage.gifterJWT);
     const user = { token: localStorage.gifterJWT };
     store.dispatch(userLoggedIn(user));
 }
