@@ -42,12 +42,11 @@ class ConfirmationPage extends Component {
                 )}
 
                 {!loading && !success && <Message negative icon>
-                        <Icon name="checkmark" />
+                        <Icon name="warning sign" />
                         <Message.Content>
                             <Message.Header>
-                                Your account has been verified.
+                                Your token is invalid.
                             </Message.Header>
-                        <Link to="/dashboard">Go to dashboard</Link>
                     </Message.Content>
                 </Message>}
 
