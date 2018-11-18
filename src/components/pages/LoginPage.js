@@ -14,6 +14,8 @@ class LoginPage extends Component {
                 <h1>Gifter Login Page</h1>
             
                 <LoginForm submit={this.submit} />
+
+                <Link to="/forgot_password">Forgot your password?</Link>
             </div>
         );
     }
