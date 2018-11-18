@@ -20,7 +20,12 @@ const App = ({ location }) => {
         component={ConfirmationPage} 
       />
       <GuestRoute location={location} path="/login" exact component={LoginPage} />
-      <GuestRoute location={location} path="/signup" exact component={SignupPage} />
+      <GuestRoute 
+        location={location} 
+        path="/signup" 
+        exact 
+        component={SignupPage} 
+      />
       <UserRoute 
         location={location} 
         path="/dashboard" 
