@@ -26,6 +26,12 @@ const App = ({ location }) => {
         exact 
         component={SignupPage} 
       />
+      <GuestRoute 
+        location={location} 
+        path="/forgot_password" 
+        exact 
+        component={ForgotPassword} 
+      />
       <UserRoute 
         location={location} 
         path="/dashboard" 
