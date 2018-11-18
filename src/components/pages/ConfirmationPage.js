@@ -41,6 +41,16 @@ class ConfirmationPage extends Component {
                     </Message>
                 )}
 
+                {!loading && !success && <Message negative icon>
+                        <Icon name="checkmark" />
+                        <Message.Content>
+                            <Message.Header>
+                                Your account has been verified.
+                            </Message.Header>
+                        <Link to="/dashboard">Go to dashboard</Link>
+                    </Message.Content>
+                </Message>}
+
             </div>
         );
     }
