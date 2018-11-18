@@ -41,15 +41,17 @@ class ConfirmationPage extends Component {
                     </Message>
                 )}
 
-                {!loading && !success && <Message negative icon>
+                {!loading && 
+                !success && (
+                    <Message negative icon>
                         <Icon name="warning sign" />
                         <Message.Content>
-                            <Message.Header>
-                                Your token is invalid.
-                            </Message.Header>
-                    </Message.Content>
-                </Message>}
-
+                                <Message.Header>
+                                    Your token is invalid.
+                                </Message.Header>
+                        </Message.Content>
+                    </Message>
+                )}
             </div>
         );
     }
