@@ -9,8 +9,6 @@ import ConfirmationPage from './components/pages/ConfirmationPage';
 import UserRoute from './components/routes/UserRoute';
 import GuestRoute from './components/routes/GuestRoute';
 
-// TODO: Double check for any missing components.
-
 const App = ({ location }) => {
   return( 
     <div className="ui container">
