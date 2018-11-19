@@ -5,6 +5,11 @@ class ForgotPasswordPage extends from Component {
         success: false
     };
 
+    submit = data =>
+        this.props
+            .resetPasswordRequest(data)
+            .then(() => this.setState({ success: true }));
+
     render() {
         return(
             <div>
