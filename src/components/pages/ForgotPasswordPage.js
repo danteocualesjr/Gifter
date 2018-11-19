@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Message } from 'semantic-ui-react';
 import ForgotPassWordForm from '../forms/ForgotPasswordForm';
 
-class ForgotPasswordPage extends from Component {
+class ForgotPasswordPage extends Component {
     state= {
         success: false
     };
