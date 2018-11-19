@@ -23,4 +23,8 @@ class ForgotPasswordPage extends from Component {
     }
 }
 
+ForgotPasswordPage.propTypes = {
+    resetPasswordRequest: PropTypes.func.isRequired
+};
+
 export default ForgotPasswordPage;
