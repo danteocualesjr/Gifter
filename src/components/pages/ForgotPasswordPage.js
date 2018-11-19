@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Message } from 'semantic-ui-react';
+import ForgotPassWordForm from '../forms/ForgotPasswordForm';
 
 class ForgotPasswordPage extends from Component {
     state= {
