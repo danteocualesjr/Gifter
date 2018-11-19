@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
 
 class ForgotPasswordPage extends from Component {
-    state= {}
+    state= {
+        success: false
+    };
 
     render() {
         return(
-            <div></div>
-        )
+            <div>
+                {this.state.success ? (
+                    <Message>Email has been sent.</Message>
+                ) : (
+                    <ForgotPassWordForm submit={this.submit} />
+                )}
+            </div>
+        );
     }
 }
 
