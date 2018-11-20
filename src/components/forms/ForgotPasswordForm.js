@@ -5,7 +5,7 @@ import InlineError from '../messages/InlineError';
 
 class ForgotPasswordForm extends Component {
     state={
-        data: {}.
+        data: {},
         loading: false,
         errors: {}
     };
@@ -36,6 +36,8 @@ class ForgotPasswordForm extends Component {
     };
 
     render() {
+        const { errors, data, loading } = this.state;
+
         return(
             <div>
 
