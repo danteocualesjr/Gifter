@@ -5,7 +5,9 @@ import InlineError from '../messages/InlineError';
 
 class ForgotPasswordForm extends Component {
     state={
-        data: {},
+        data: {
+            email: ''
+        },
         loading: false,
         errors: {}
     };
@@ -32,6 +34,7 @@ class ForgotPasswordForm extends Component {
 
     validate = data => {
         const errors = {};
+        if (!isEmail(data.email)) errors.email = "Invalid email";
         return errors;
     };
 
