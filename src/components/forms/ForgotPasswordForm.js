@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Form, Button } from 'semantic-ui-react';
 import isEmail from 'validator/lib/isEmail';
 import InlineError from '../messages/InlineError';
+import { resetPasswordRequest } from '../../actions/auth';
 
 class ForgotPasswordForm extends Component {
     state={
