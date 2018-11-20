@@ -46,4 +46,8 @@ class ForgotPasswordForm extends Component {
     }
 }
 
+ForgotPasswordForm.propTypes = {
+    submit: PropTypes.func.isRequired
+};
+
 export default ForgotPasswordForm;
