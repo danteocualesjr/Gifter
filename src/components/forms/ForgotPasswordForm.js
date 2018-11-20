@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { Form, Button } from 'semantic-ui-react';
 import isEmail from 'validator/lib/isEmail';
 import InlineError from '../messages/InlineError';
@@ -66,4 +67,4 @@ ForgotPasswordForm.propTypes = {
     submit: PropTypes.func.isRequired
 };
 
-export default ForgotPasswordForm;
+export default connect(null, { resetPasswordRequest })(ForgotPasswordForm);
