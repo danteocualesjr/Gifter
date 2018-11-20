@@ -47,10 +47,10 @@ class ForgotPasswordForm extends Component {
                 <Form.Field error={!!errors.email}>
                     <label hitmlFor="email">Email</label>
                     <input 
-                        type="text"
+                        type="email"
                         id="email"
                         name="email"
-                        placeholder="placeholder"
+                        placeholder="email"
                         value={data.email}
                         onChange={this.onChange}
                     />
