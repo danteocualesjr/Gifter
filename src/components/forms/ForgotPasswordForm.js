@@ -39,10 +39,10 @@ class ForgotPasswordForm extends Component {
         const { errors, data, loading } = this.state;
 
         return(
-            <div>
-
-            </div>
-        )
+            <Form onSubmit={this.onSubmit} loading={loading}>
+                <Button primary>ForgotPasswordForm</Button>
+            </Form>
+        );
     }
 }
 
