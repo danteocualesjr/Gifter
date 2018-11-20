@@ -30,7 +30,10 @@ class ForgotPasswordForm extends Component {
         }
     };
 
-    
+    validate = data => {
+        const errors = {};
+        return errors;
+    };
 
     render() {
         return(
