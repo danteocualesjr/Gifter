@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Form, Button } from 'semantic-ui-react';
+import { Form, Button, Message } from 'semantic-ui-react';
 import isEmail from 'validator/lib/isEmail';
 import InlineError from '../messages/InlineError';
 import { resetPasswordRequest } from '../../actions/auth';
