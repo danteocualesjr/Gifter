@@ -46,6 +46,7 @@ class ForgotPasswordForm extends Component {
 
         return(
             <Form onSubmit={this.onSubmit} loading={loading}>
+                {!!errors.global && <Message negative>{errors.global}</Message>}
                 <Form.Field error={!!errors.email}>
                     <label hitmlFor="email">Email</label>
                     <input 
