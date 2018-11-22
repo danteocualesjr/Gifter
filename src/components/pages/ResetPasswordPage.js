@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Message } from 'semantic-ui-react';
+import { validateToken } from '../../actions/auth';
 
 class ResetPasswordPage extends Component {
     state = {
@@ -34,4 +35,4 @@ ResetPasswordPage.propTypes = {
     }).isRequired
 };
 
-export default connect()(ResetPasswordPage);
+export default connect(null, { validateToken })(ResetPasswordPage);
