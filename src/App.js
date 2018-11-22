@@ -31,7 +31,13 @@ const App = ({ location }) => {
         location={location} 
         path="/forgot_password" 
         exact 
-        component={ForgotPassword} 
+        component={ForgotPasswordPage} 
+      />
+      <GuestRoute 
+        location={location} 
+        path="/reset_password" 
+        exact 
+        component={ResetPasswordPage} 
       />
       <UserRoute 
         location={location} 
