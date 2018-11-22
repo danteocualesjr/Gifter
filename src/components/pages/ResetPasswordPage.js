@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { Message } from 'semantic-ui-react';
 
 class ResetPasswordPage extends Component {
@@ -33,4 +34,4 @@ ResetPasswordPage.propTypes = {
     }).isRequired
 };
 
-export default ResetPasswordPage;
+export default connect()(ResetPasswordPage);
