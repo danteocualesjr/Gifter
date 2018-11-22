@@ -22,4 +22,13 @@ class ResetPasswordPage extends Component {
     }
 }
 
+ResetPasswordPage.propTypes = {
+    validateToken: propTypes.func.isRequired,
+    match: PropTypes.shape({
+        params: PropTypes.shape({
+            token: PropTypes.string.isRequired
+        }).isRequired
+    }).isRequired
+};
+
 export default ResetPasswordPage;
