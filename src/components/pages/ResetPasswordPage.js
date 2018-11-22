@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 
 class ResetPasswordPage extends Component {
-    state = {}
-    
+    state = {
+        loading: true,
+        success: false
+    }
+
     render() {
+        const { loading, success } = this.state;
         return (
-            <div></div>
+            <div>
+                { loading && <Message>Loading</Message>}
+            </div>
         )
     }
 }
