@@ -11,8 +11,10 @@ class ResetPasswordPage extends Component {
         return (
             <div>
                 { loading && <Message>Loading</Message>}
+                { !loading && success && <Message>Form</Message>}
+                { !loading && !success && <Message>Invalid Token</Message>}
             </div>
-        )
+        );
     }
 }
 
