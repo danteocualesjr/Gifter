@@ -11,7 +11,10 @@ class ResetPasswordPage extends Component {
     }
 
     componentDidMount() {
-        this.props.validateToken(this.props.match.params.token)
+        this.props
+            .validateToken(this.props.match.params.token)
+            .then(() => this.setState({ loading: false, success: true }))
+            .catch(() => this.setState({ loading: false, success: false }))
     }
 
     render() {
