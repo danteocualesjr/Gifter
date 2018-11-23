@@ -19,6 +19,8 @@ class ResetPasswordPage extends Component {
 
     render() {
         const { loading, success } = this.state;
+        const token = this.props.match.params.token;
+        
         return (
             <div>
                 { loading && <Message>Loading</Message>}
