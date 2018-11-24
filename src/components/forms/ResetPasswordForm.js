@@ -29,6 +29,11 @@ class ResetPasswordForm extends Component {
         }
     };
 
+    validate = data => {
+        const errors = {};
+        return errors;
+    };
+
     render() {
         return(
             <div>
