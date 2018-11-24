@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 
 class ResetPasswordForm extends Component {
     state = {
-        data: {},
+        data: {
+            token: this.props.token
+        },
         loading: false,
         errors: {}
     };
