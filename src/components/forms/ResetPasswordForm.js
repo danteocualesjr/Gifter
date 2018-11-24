@@ -45,4 +45,8 @@ class ResetPasswordForm extends Component {
     }
 }
 
+ResetPasswordForm.propTypes = {
+    submit: PropTypes.func.isRequired
+};
+
 export default ResetPasswordForm;
