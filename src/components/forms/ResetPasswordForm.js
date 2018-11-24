@@ -35,11 +35,13 @@ class ResetPasswordForm extends Component {
     };
 
     render() {
-        return(
-            <div>
+        const { errors, data, loading } = this.state;
 
-            </div>
-        )
+        return(
+            <Form onSubmit={this.onSubmit} loading={loading}>
+                <Button primary>ResetPasswordForm</Button>
+            </Form>
+        );
     }
 }
 
