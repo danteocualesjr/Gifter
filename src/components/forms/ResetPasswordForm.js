@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 
 class ResetPasswordForm extends Component {
-    state = {}
+    state = {
+        data: {},
+        loading: false,
+        errors: {}
+    };
 
     render() {
         return(
