@@ -7,6 +7,12 @@ class ResetPasswordForm extends Component {
         errors: {}
     };
 
+    onChange = e => 
+    this.setState({
+        ...this.state,
+        data: { ...this.state.data, [e.target.name]: e.target.value }
+    });
+
     render() {
         return(
             <div>
