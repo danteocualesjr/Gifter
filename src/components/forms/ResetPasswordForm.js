@@ -33,6 +33,9 @@ class ResetPasswordForm extends Component {
 
     validate = data => {
         const errors = {};
+        if (!data.password) errors.password = "Can't be blank.";
+        if (!data.password !== data.passwordConfirmation)
+            errors.password = "Passwords must match";
         return errors;
     };
 
