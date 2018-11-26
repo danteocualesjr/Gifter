@@ -39,10 +39,14 @@ class ResetPasswordPage extends Component {
 
 ResetPasswordPage.propTypes = {
     validateToken: propTypes.func.isRequired,
+    resetPassword: PropTypes.func.isRequired,
     match: PropTypes.shape({
         params: PropTypes.shape({
             token: PropTypes.string.isRequired
         }).isRequired
+    }).isRequired,
+    history: PropTypes.shape({
+        push: PropTypes.func.isRequired
     }).isRequired
 };
 
