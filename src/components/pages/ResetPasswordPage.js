@@ -50,4 +50,4 @@ ResetPasswordPage.propTypes = {
     }).isRequired
 };
 
-export default connect(null, { validateToken })(ResetPasswordPage);
+export default connect(null, { validateToken, resetPassword })(ResetPasswordPage);
