@@ -44,7 +44,19 @@ class ResetPasswordForm extends Component {
 
         return(
             <Form onSubmit={this.onSubmit} loading={loading}>
-                <Button primary>ResetPasswordForm</Button>
+                <Form.Field error={!!errors.password}>
+                    <label htmlFor="password">New Password</label>
+                    <input
+                        type="text"
+                        id="password"
+                        name="password"
+                        placeholder="placeholder"
+                        value={data.password}
+                        onChange={this.onChange}
+                    />
+                    {errors.password && <InlineError text={errors.password} />}
+                </Form.Field>
+                <Button primary>Reset</Button>
             </Form>
         );
     }
