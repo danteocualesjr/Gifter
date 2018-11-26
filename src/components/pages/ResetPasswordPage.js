@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Message } from 'semantic-ui-react';
 import ResetPasswordForm from '../forms/ResetPasswordForm';
-import { validateToken } from '../../actions/auth';
+import { validateToken, resetPassword } from '../../actions/auth';
 
 class ResetPasswordPage extends Component {
     state = {
