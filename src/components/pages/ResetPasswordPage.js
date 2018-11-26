@@ -18,6 +18,11 @@ class ResetPasswordPage extends Component {
             .catch(() => this.setState({ loading: false, success: false }))
     }
 
+    submit = data =>
+        this.props
+            .resetPassword(data)
+            .then(() => this.props.history.push("/login"));
+
     render() {
         const { loading, success } = this.state;
         const token = this.props.match.params.token;
