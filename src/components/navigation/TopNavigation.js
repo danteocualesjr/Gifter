@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Menu } from 'semantic-ui-react';
-imported { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import gravatarUrl from 'gravatar-url';
 
 const TopNavigation = (props) => (
     <Menu secondary pointing>
