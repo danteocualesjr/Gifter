@@ -20,7 +20,8 @@ const TopNavigation = ({ user }) => (
 TopNavigation.propTypes = {
     user: PropTypes.shape({
         email: PropTypes.string.isRequired
-    }).isRequired
+    }).isRequired,
+    logout: PropTypes.func.isRequired
 };
 
 function mapStateToProps(state) {
