@@ -21,4 +21,4 @@ TopNavigation.propTypes = {
     }).isRequired
 };
 
-export default TopNavigation;
+export default connect(mapStateToProps, { logout })(TopNavigation);
