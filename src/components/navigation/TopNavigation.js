@@ -22,4 +22,10 @@ TopNavigation.propTypes = {
     }).isRequired
 };
 
+function mapStateToProps(state) {
+    return {
+        user.state.user
+    }
+}
+
 export default connect(mapStateToProps, { logout })(TopNavigation);
