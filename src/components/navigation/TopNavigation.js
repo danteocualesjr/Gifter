@@ -14,4 +14,10 @@ const TopNavigation = ({ user }) => (
     </Menu>
 );
 
+TopNavigation.propTypes = {
+    user: PropTypes.shape({
+        email: PropTypes.string.isRequired
+    }).isRequired
+};
+
 export default TopNavigation;
