@@ -58,4 +58,10 @@ App.propTypes = {
   }).isRequired
 };
 
+function mapStateToProps(state) {
+  return {
+    isAuthenticated: !!state.user.email
+  }
+}
+
 export default connect(mapStateToProps)(App);
