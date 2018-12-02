@@ -3,7 +3,7 @@ import { Menu } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import gravatarUrl from 'gravatar-url';
 
-const TopNavigation = (props) => (
+const TopNavigation = ({ user }) => (
     <Menu secondary pointing>
         <Menu.Item as={Link} to="/dashboard">Dashboard</Menu.Item>
         <Menu.Menu position="right">
