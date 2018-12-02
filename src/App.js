@@ -13,10 +13,10 @@ import UserRoute from './components/routes/UserRoute';
 import GuestRoute from './components/routes/GuestRoute';
 import TopNavigation from './components/navigation/TopNavigation';
 
-const App = ({ location }) => {
+const App = ({ location, isAuthenticated }) => {
   return( 
     <div className="ui container">
-      <TopNavigation />
+      {isAuthenticated && <TopNavigation />}
       <Route location={location} path="/" exact component={HomePage} />
       <Route 
         location={location} 
@@ -55,7 +55,8 @@ const App = ({ location }) => {
 App.propTypes = {
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired
-  }).isRequired
+  }).isRequired,
+  isAuthenticated: Proptypes.bool.isRequired
 };
 
 function mapStateToProps(state) {
