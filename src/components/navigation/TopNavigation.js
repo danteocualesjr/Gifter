@@ -4,6 +4,7 @@ import { Menu, Dropdown, Image } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import gravatarUrl from 'gravatar-url';
+import { logout } from '../../actions/auth';
 
 const TopNavigation = ({ user }) => (
     <Menu secondary pointing>
