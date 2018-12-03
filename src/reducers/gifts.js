@@ -7,3 +7,7 @@ export default function gifts(state = {}, action = {}) {
 //  SELECTORS 
 
 export const giftsSelector = state => state.gifts;
+
+export const allGiftsSelector = createSelector(
+
+);
