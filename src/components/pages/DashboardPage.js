@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import ConfirmEmailMessage from '../messages/ConfirmEmailMessage';
 import gifts from '../../reducers/gifts';
 
-const DashboardPage = ({ isConfirmed }) => {
+const DashboardPage = ({ isConfirmed, gifts }) => {
     return (
         <div>
             {!isConfirmed && <ConfirmEmailMessage />}
