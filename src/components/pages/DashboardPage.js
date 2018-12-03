@@ -24,8 +24,8 @@ DashboardPage.propTypes = {
 function mapStateToProps(state) {
     return {
         isConfirmed: !!state.user.confirmed,
-        gifts: state.gifts
-    }
+        gifts: allGiftsSelector(state)
+    };
 }
 
 export default connect(mapStateToProps)(DashboardPage);
