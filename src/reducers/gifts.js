@@ -3,3 +3,7 @@ export default function gifts(state = {}, action = {}) {
         default: return state;
     }
 }
+
+//  SELECTORS 
+
+export const giftsSelector = state => state.gifts;
