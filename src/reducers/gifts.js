@@ -8,7 +8,7 @@ export default function gifts(state = {}, action = {}) {
 
 export const giftsSelector = state => state.gifts;
 
-export const allGiftsSelector = createSelector(
-    giftsSelector,
-    booksHash => 
+export const allGiftsSelector = createSelector(booksSelector, bookHash =>
+    Object.values(booksHash)
 );
+
