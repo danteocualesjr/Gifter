@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import ConfirmEmailMessage from '../messages/ConfirmEmailMessage';
 import { allGiftsSelector } from '../../reducers/gifts';
-import AddGiftCta from '../ctas/AddBookCta';
+import AddGiftCtA from '../ctas/AddBookCtA';
 
 const DashboardPage = ({ isConfirmed, gifts }) => {
     return (
