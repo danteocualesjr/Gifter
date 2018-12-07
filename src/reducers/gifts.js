@@ -13,4 +13,3 @@ export const giftsSelector = state => state.gifts;
 export const allGiftsSelector = createSelector(giftsSelector, giftHash =>
     Object.values(giftsHash)
 );
-
