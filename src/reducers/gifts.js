@@ -1,4 +1,4 @@
-import { createSelector } from 'reselector';
+import { createSelector } from 'reselect';
 
 export default function gifts(state = {}, action = {}) {
     switch(action.type) {
