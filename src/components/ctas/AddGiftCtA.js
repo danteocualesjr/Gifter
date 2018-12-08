@@ -1,4 +1,5 @@
 import React from 'React';
+import { Card, Icon } from 'semantic-ui-react';
 
 const AddGiftCtA = (props) => (
     <Card centered>
