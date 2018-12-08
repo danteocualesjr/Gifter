@@ -1,6 +1,6 @@
 import React from 'React';
 
-const AddBookCtA = (props) => (
+const AddGiftCtA = (props) => (
     <Card centered>
         <Card.Content textAlign="center">
 
