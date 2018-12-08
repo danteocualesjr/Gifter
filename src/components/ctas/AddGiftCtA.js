@@ -1,9 +1,11 @@
 import React from 'React';
 
 const AddBookCtA = (props) => (
-    <div>
+    <Card centered>
+        <Card.Content textAlign="center">
 
-    </div>
+        </Card.Content>
+    </Card>
 );
 
 export default AddGiftCtA;
