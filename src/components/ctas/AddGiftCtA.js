@@ -1,5 +1,6 @@
 import React from 'React';
 import { Card, Icon } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 const AddGiftCtA = (props) => (
     <Card centered>
