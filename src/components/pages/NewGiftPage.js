@@ -1,7 +1,9 @@
 import React from 'react';
 
 class NewGiftPage extends Component {
-    state = {}
+    state = {
+        gift: null
+    }
 
     render() {
         return (
@@ -9,3 +11,5 @@ class NewGiftPage extends Component {
         )
     }
 }
+
+export default NewGiftPage;
