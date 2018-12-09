@@ -48,6 +48,11 @@ const App = ({ location, isAuthenticated }) => {
         path="/dashboard" 
         exact component={DashboardPage} 
       />
+      <UserRoute 
+        location={location} 
+        path="/gifts/new" 
+        exact component={NewGiftPage} 
+      />
     </div>
   )
 }
