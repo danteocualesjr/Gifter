@@ -21,8 +21,10 @@ class SearchGiftForm extends Component {
     fetchOptions = () => {
         if (!this.state.query) return;
         this.setState({ loading: true });
-        axios.get(`/api/gifts/search?q=${this.state.query}`)
-    }
+        axios
+            .get(`/api/gifts/search?q=${this.state.query}`)
+            .then(res => res.data.gifts);
+    };
 
     render() {
         return (
