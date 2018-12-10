@@ -1,4 +1,5 @@
 import React from 'react';
+import { Segment } from 'semantic-ui-react';
 import SearchGiftForm from '../forms/SearchGiftForm';
 
 class NewGiftPage extends Component {
