@@ -12,7 +12,8 @@ class SearchGiftForm extends Component {
             key: 1,
             value: 1,
             text: "first gift"
-        }]
+        }],
+        gifts: {}
     }
 
     render() {
