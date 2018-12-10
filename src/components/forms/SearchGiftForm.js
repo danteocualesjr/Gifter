@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import { Form, Dropdown } from 'semantic-ui-react';
 
 class SearchGiftForm extends Component {
@@ -20,6 +21,7 @@ class SearchGiftForm extends Component {
     fetchOptions = () => {
         if (!this.state.query) return;
         this.setState({ loading: true });
+        axios.get(`/api/gifts/search?q=${this.state.query}`)
     }
 
     render() {
