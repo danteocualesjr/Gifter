@@ -16,6 +16,10 @@ class SearchGiftForm extends Component {
         gifts: {}
     }
 
+    onSearchChange = (e, data) => {
+        
+    }
+
     render() {
         return (
             <Form>
@@ -24,7 +28,7 @@ class SearchGiftForm extends Component {
                     fluid
                     placeholder="Search for a gift"
                     value={this.state.query}
-                    onSearchChange
+                    onSearchChange={this.onSearchChange}
                 />
             </Form>
         );
