@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchGiftForm from '../forms/SearchGiftForm';
 
 class NewGiftPage extends Component {
     state = {
@@ -7,7 +8,10 @@ class NewGiftPage extends Component {
 
     render() {
         return (
-            <div></div>
+            <Segment>
+                <h1>Add new gift</h1>
+                <SearchGiftForm />
+            </Segment>
         )
     }
 }
