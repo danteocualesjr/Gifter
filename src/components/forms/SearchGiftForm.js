@@ -39,6 +39,7 @@ class SearchGiftForm extends Component {
                     placeholder="Search for a gift"
                     value={this.state.query}
                     onSearchChange={this.onSearchChange}
+                    options={this.state.options}
                 />
             </Form>
         );
