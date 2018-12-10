@@ -24,6 +24,11 @@ class SearchGiftForm extends Component {
         this.timer = setTimeout(this.fetchOptions, 1000);
     }
 
+    fetchOptions = () => {
+        if (!this.state.query) return;
+        this.setState({ loading: true });
+    }
+
     render() {
         return (
             <Form>
