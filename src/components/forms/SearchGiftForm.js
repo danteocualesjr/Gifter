@@ -18,7 +18,15 @@ class SearchGiftForm extends Component {
 
     render() {
         return (
-            <div></div>
+            <Form>
+                <Dropdown 
+                    search
+                    fluid
+                    placeholder="Search for a gift"
+                    value={this.state.query}
+                    onSearchChange
+                />
+            </Form>
         );
     }
 }
