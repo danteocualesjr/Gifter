@@ -5,15 +5,7 @@ class SearchGiftForm extends Component {
     state = {
         query: '',
         loading: false,
-        options: [{
-            key: 1,
-            value: 1,
-            text: "first gift"
-        },{
-            key: 1,
-            value: 1,
-            text: "first gift"
-        }],
+        options: [],
         gifts: {}
     }
 
