@@ -34,7 +34,8 @@ class SearchGiftForm extends Component {
                         value: gift.giftId,
                         text: gift.title
                     })
-                })
+                });
+                this.setState({ loading: false, options, gifts: giftsHash })
             });
     };
 
