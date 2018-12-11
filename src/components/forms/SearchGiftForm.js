@@ -28,7 +28,12 @@ class SearchGiftForm extends Component {
                 const options = [];
                 const giftsHash = {};
                 gifts.forEach(gift => {
-                    giftsHash[gift.giftId]
+                    giftsHash[gift.giftId] = gift;
+                    options.push({
+                        key: gift.giftId,
+                        value: gift.giftId,
+                        text: gift.title
+                    })
                 })
             });
     };
