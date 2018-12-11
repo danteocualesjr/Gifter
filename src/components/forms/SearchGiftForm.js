@@ -23,7 +23,14 @@ class SearchGiftForm extends Component {
         this.setState({ loading: true });
         axios
             .get(`/api/gifts/search?q=${this.state.query}`)
-            .then(res => res.data.gifts);
+            .then(res => res.data.gifts)
+            .then(books => {
+                const options = [];
+                const giftsHash = {};
+                gifts.forEach(gift => {
+                    giftsHash[gift.giftId]
+                })
+            });
     };
 
     render() {
