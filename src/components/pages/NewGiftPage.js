@@ -13,7 +13,7 @@ class NewGiftPage extends Component {
         return (
             <Segment>
                 <h1>Add new gift</h1>
-                <SearchGiftForm />
+                <SearchGiftForm onGiftSelect={this.onGiftSelect} />
             </Segment>
         )
     }
