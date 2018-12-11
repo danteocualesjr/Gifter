@@ -56,4 +56,8 @@ class SearchGiftForm extends Component {
     }
 }
 
+SearchGiftForm.propTypes = {
+    onGiftSelect: PropTypes.func.isRequired
+};
+
 export default SearchGiftForm;
