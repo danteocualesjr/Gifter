@@ -7,6 +7,8 @@ class NewGiftPage extends Component {
         gift: null
     }
 
+    onGiftSelect = gift => this.setState({ gift });
+
     render() {
         return (
             <Segment>
