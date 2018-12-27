@@ -37,6 +37,10 @@ class GiftForm extends Component {
     onSubmit = e => {
 
     }
+
+    onChangeNumber = e => {
+        
+    }
 }
 
 export default GiftForm;
