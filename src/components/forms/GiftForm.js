@@ -75,6 +75,16 @@ class GiftForm extends Component {
         return errors;
     };
 
+    render() {
+        const { errors, data, loading } = this.state;
+
+        return (
+            <Segment>
+                
+            </Segment>
+        )
+    }
+
 }
 
 export default GiftForm;
