@@ -96,7 +96,18 @@ class GiftForm extends Component {
                                     />
                                     {errors.title && <InlineError text={errors.title} />}
                                 </Form.Field>
-                                
+                                <Form.Field error={!!errors.authors}>
+                                    <label htmlFor="authors">Book Authors</label>
+                                    <input
+                                        type="text"
+                                        id="authors"
+                                        name="authors"
+                                        placeholder="Authors"
+                                        value={data.authors}
+                                        onChange={this.onChange}
+                                    />
+                                    {errors.authors && <InlineError text={errors.authors} />}
+                                </Form.Field>
                             </Grid.Column>
                         </Grid.Row>
                     </Grid>
