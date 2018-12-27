@@ -80,7 +80,13 @@ class GiftForm extends Component {
 
         return (
             <Segment>
-                
+                <Form onSubmit={this.onSubmit} loading={loading}>
+                    <Grid columns={2} stackable>
+                        <Grid.Row>
+
+                        </Grid.Row>
+                    </Grid>
+                </Form>
             </Segment>
         )
     }
