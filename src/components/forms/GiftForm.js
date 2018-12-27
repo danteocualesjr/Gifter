@@ -67,6 +67,10 @@ class GiftForm extends Component {
         });
     };
 
+    validate = data => {
+        const errors = {};
+    }
+
 }
 
 export default GiftForm;
