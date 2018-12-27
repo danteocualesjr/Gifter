@@ -83,7 +83,19 @@ class GiftForm extends Component {
                 <Form onSubmit={this.onSubmit} loading={loading}>
                     <Grid columns={2} stackable>
                         <Grid.Row>
-
+                            <Grid.Column>
+                                <Form.Field error={!!errors.title}>
+                                    <label htmlFor="title">Book Title</label>
+                                    <input
+                                        type="text"
+                                        id="title"
+                                        name="title"
+                                        placeholder="Title"
+                                        value={data.title}
+                                        onChange={this.onChange}
+                                    />
+                                </Form.Field>
+                            </Grid.Column>
                         </Grid.Row>
                     </Grid>
                 </Form>
