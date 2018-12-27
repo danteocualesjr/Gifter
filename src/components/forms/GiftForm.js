@@ -69,7 +69,11 @@ class GiftForm extends Component {
 
     validate = data => {
         const errors = {};
-    }
+        if (!data.title) errors.title = "Can't be blank";
+        if (!data.authors) errors.authors = "Can't be blank";
+        if (!data.pages) errors.pages = "Can't be balnk";
+        return errors;
+    };
 
 }
 
