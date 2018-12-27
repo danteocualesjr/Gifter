@@ -31,16 +31,23 @@ class GiftForm extends Component {
     onChange = e =>
         this.setState({
             ...this.state,
-            data: {}
+            data: { ...this.state.data, [e.target.name]: e.target.value }
         });
+
+    onChangeNumber = e => {
+        this.setState({
+            ...this.state,
+            data: {
+                ...this.state.data,
+                [e.target.name]: parseInt(e.target.value, 10)
+            }
+        });
+    }
 
     onSubmit = e => {
 
     }
 
-    onChangeNumber = e => {
-        
-    }
 }
 
 export default GiftForm;
