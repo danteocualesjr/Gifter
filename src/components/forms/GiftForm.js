@@ -9,8 +9,13 @@ class GiftForm extends Component {
             cover: this.props.gift.covers[0],
             pages: this.props.gift.pages
         },
-    }
+        covers: this.props.gift.covers,
+        index: 0,
+        loading: false,
+        errors: {}
+    };
 
+    
 
 }
 
