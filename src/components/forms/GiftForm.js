@@ -33,6 +33,10 @@ class GiftForm extends Component {
             ...this.state,
             data: {}
         });
+
+    onSubmit = e => {
+
+    }
 }
 
 export default GiftForm;
