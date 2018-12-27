@@ -58,6 +58,11 @@ class GiftForm extends Component {
         }
     };
 
+    changeCover = () => {
+        const { index, covers } = this.state;
+        const newIndex = index + 1 >= covers.length ? 0 : index + 1;
+    }
+
 }
 
 export default GiftForm;
