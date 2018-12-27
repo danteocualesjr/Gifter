@@ -94,7 +94,9 @@ class GiftForm extends Component {
                                         value={data.title}
                                         onChange={this.onChange}
                                     />
+                                    {errors.title && <InlineError text={errors.title} />}
                                 </Form.Field>
+                                
                             </Grid.Column>
                         </Grid.Row>
                     </Grid>
