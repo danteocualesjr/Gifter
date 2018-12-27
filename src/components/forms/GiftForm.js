@@ -15,7 +15,17 @@ class GiftForm extends Component {
         errors: {}
     };
 
-    
+    componentWillReceiveProps(props) {
+        this.setState({
+            data: {
+                giftId: props.gift.giftId,
+                title: props.gift.title,
+                authors: props.gift.authors,
+                cover: props.gift.covers[0],
+                pages: props.gift.pages
+            },
+        })
+    }
 
 }
 
