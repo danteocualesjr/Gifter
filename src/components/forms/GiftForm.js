@@ -24,9 +24,15 @@ class GiftForm extends Component {
                 cover: props.gift.covers[0],
                 pages: props.gift.pages
             },
-        })
+            covers: props.gift.covers
+        });
     }
 
+    onChange = e =>
+        this.setState({
+            ...this.state,
+            data: {}
+        });
 }
 
 export default GiftForm;
