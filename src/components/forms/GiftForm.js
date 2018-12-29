@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { AsyncParallelBailHook } from 'tapable';
 
 class GiftForm extends Component {
     state = {
@@ -141,5 +142,16 @@ class GiftForm extends Component {
         );
     }
 }
+
+GiftForm.propTypes = {
+    submit: PropTypes.func.isRequired,
+    book: PropTypes.shape({
+        giftId: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        authors: PropTypes.string.isRequired,
+        covers: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+        pages: PropTypes.number
+    }).isRequired
+};
 
 export default GiftForm;
