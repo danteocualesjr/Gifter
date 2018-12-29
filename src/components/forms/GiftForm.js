@@ -108,6 +108,18 @@ class GiftForm extends Component {
                                     />
                                     {errors.authors && <InlineError text={errors.authors} />}
                                 </Form.Field>
+                                <Form.Field error={!!errors.pages}>
+                                    <label htmlFor="pages">Pages</label>
+                                    <input
+                                        disabled={data.pages === undefined}
+                                        type="text"
+                                        id="pages"
+                                        name="pages"
+                                        value={data.pages !== undefined ? data.pages : "Loading..."}
+                                        onChange={this.onChangeNumber}
+                                    />
+                                    {errors.pages && <InlineError text={errors.pages} />}
+                                </Form.Field>                                
                             </Grid.Column>
                         </Grid.Row>
                     </Grid>
