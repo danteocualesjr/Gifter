@@ -121,6 +121,14 @@ class GiftForm extends Component {
                                     {errors.pages && <InlineError text={errors.pages} />}
                                 </Form.Field>                                
                             </Grid.Column>
+                            <Grid.Column>
+                                <Image size="small" src={data.cover} />
+                                {this.state.covers.length > 1 && (
+                                    <a role="button" tabIndex={0} onClick={this.UNSAFE_componentWillMount.changeCover}>
+                                        Another cover
+                                    </a>
+                                )}
+                            </Grid.Column>
                         </Grid.Row>
                     </Grid>
                 </Form>
