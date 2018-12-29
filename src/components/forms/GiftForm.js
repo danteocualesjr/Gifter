@@ -121,6 +121,7 @@ class GiftForm extends Component {
                                     {errors.pages && <InlineError text={errors.pages} />}
                                 </Form.Field>                                
                             </Grid.Column>
+                        
                             <Grid.Column>
                                 <Image size="small" src={data.cover} />
                                 {this.state.covers.length > 1 && (
@@ -130,12 +131,15 @@ class GiftForm extends Component {
                                 )}
                             </Grid.Column>
                         </Grid.Row>
+
+                        <Grid.Row>
+                            <Button primary>Save</Button>
+                        </Grid.Row>
                     </Grid>
                 </Form>
             </Segment>
-        )
+        );
     }
-
 }
 
 export default GiftForm;
