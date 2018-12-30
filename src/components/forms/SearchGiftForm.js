@@ -19,6 +19,11 @@ class SearchGiftForm extends Component {
         this.timer = setTimeout(this.fetchOptions, 1000);
     }
 
+    onChange = (e, data) => {
+        this.setState({ query: data.value });
+        this.props.onGiftSelect(this.state.gifts[data.value]);
+    };
+
     fetchOptions = () => {
         if (!this.state.query) return;
         this.setState({ loading: true });
