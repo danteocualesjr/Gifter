@@ -14,6 +14,7 @@ export const userLoggedOut = () => ({
 export const login = credentials => dispatch =>
     api.user.login(credentials).then(user => {
         localStorage.gifterJWT = user.token;
+        setAuthorizationHeader(user.token);
         dispatch(userLoggedIn(user));
     });
 
