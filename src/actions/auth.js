@@ -20,6 +20,7 @@ export const login = credentials => dispatch =>
 
 export const logout = () => dispatch => {
     localStorage.removeItem("gifterJWT");
+    setAuthorizationHeader();
     dispatch(userLoggedOut());
 };
 
