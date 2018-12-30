@@ -18,3 +18,7 @@ export const fetchGifts = () => dispatch =>
         .fetchAll()
         .then(books => dispatch(giftsFetched(normalize(gifts, [giftSchema]))));
 
+export const createGift = data => dispatch =>
+    api.gifts
+        .create(data)
+        .then(gift => dispatch(giftCreated(normalize(gift, giftSchema))));
