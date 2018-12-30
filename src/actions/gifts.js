@@ -1,5 +1,7 @@
 import { normalize } from 'normalizer';
 import { GIFTS_FETCHED, GIFT_CREATED } from '../types';
+import api from '../api';
+import { giftSchema } from '../schemas';
 
 const giftsFetched = data => ({
     type: GIFTS_FETCHED,
