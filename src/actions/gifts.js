@@ -8,3 +8,8 @@ const giftsFetched = data => ({
     data
 });
 
+const giftCreated = data => ({
+    type: GIFT_CREATED,
+    data
+});
+
