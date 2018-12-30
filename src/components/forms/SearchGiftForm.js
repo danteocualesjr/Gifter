@@ -56,6 +56,7 @@ class SearchGiftForm extends Component {
                     onSearchChange={this.onSearchChange}
                     options={this.state.options}
                     loading={this.state.loading}
+                    onChange={this.onChange}
                 />
             </Form>
         );
