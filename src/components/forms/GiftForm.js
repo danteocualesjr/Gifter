@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { AsyncParallelBailHook } from 'tapable';
+import { Form, Button, Grid, Segment, Image } from 'semantic-ui-react';
+import InlineError from '../messages/InlineError';
 
 class GiftForm extends Component {
     state = {
