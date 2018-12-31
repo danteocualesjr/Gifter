@@ -8,23 +8,29 @@ import { fetchGifts } from '../../actions/gifts';
 
 class DashboardPage extends Component {
     componentDidMount = () => this.onInit(this.props);
+
+    onInit = props => props.fetchGifts();
+
+    render() {
+        const { isConfirmed, gifts } = this.props;
+        return (
+            <div>
+                {!isConfirmed && <ConfirmEmailMessage />}
+    
+                {gifts.length === 0 ? <AddGiftCta /> : <p>You have gifts!</p>}
+            </div>
+        );
+    }
 }
-
-const DashboardPage = ({ isConfirmed, gifts }) => {
-    return (
-        <div>
-            {!isConfirmed && <ConfirmEmailMessage />}
-
-            {gifts.length === 0 && <AddGiftCta />}
-        </div>
-    )
-};
 
 DashboardPage.propTypes = {
     isConfirmed: PropTypes.bool.isRequired,
-    gifts: PropTypes.arrayOf(PropTypes.shape({
-        title: PropTypes.string.isRequired
-    }).isRequired).isRequired
+    fetchGifts: PropTypes.func.isRequired,
+    gifts: PropTypes.arrayOf(
+        PropTypes.shape({
+            title: PropTypes.string.isRequired
+        }).isRequired
+    ).isRequired
 };
 
 function mapStateToProps(state) {
