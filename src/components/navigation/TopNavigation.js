@@ -32,6 +32,7 @@ TopNavigation.propTypes = {
     user: PropTypes.shape({
         email: PropTypes.string.isRequired
     }).isRequired,
+    hasGifts: PropTypes.bool.isRequired,
     logout: PropTypes.func.isRequired
 };
 
