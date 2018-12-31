@@ -32,4 +32,4 @@ ForgotPasswordPage.propTypes = {
     resetPasswordRequest: PropTypes.func.isRequired
 };
 
-export default ForgotPasswordPage;
+export default connect(null, { resetPasswordRequest })(ForgotPasswordPage);
