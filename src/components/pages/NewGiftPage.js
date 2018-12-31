@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { Segment } from 'semantic-ui-react';
 import axios from 'axios';
 import SearchGiftForm from '../forms/SearchGiftForm';
+import BookForm from '../forms/GiftForm';
+import { createGift } from '../../actions/gifts';
 
 class NewGiftPage extends Component {
     state = {
