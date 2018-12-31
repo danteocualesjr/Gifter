@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import gravatarUrl from 'gravatar-url';
 import * as actions from '../../actions/auth';
+import { allGiftSelector } from '../../reducers/gifts';
 
 const TopNavigation = ({ user, logout }) => (
     <Menu secondary pointing>

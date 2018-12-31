@@ -9,6 +9,6 @@ const ConfirmEmailMessage = () => {
             </Message.Header>
         </Message>
     )
-}
+};
 
 export default ConfirmEmailMessage;
