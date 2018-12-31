@@ -1,5 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { Segment } from 'semantic-ui-react';
+import axios from 'axios';
 import SearchGiftForm from '../forms/SearchGiftForm';
 
 class NewGiftPage extends Component {
