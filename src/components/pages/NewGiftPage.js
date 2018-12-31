@@ -20,6 +20,10 @@ class NewGiftPage extends Component {
             .then(pages => this.setState({ gift: { ...gift, pages } }));
     };
 
+    addGift = gift =>
+        this.props
+            .createGift(gift)
+            .then(() => this.props.history.push('/dashboard'));
 
     render() {
         return (
