@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import gravatarUrl from 'gravatar-url';
 import * as actions from '../../actions/auth';
-import { allGiftSelector } from '../../reducers/gifts';
+import { allGiftSelector, allGiftsSelector } from '../../reducers/gifts';
 
 const TopNavigation = ({ user, logout, hasGifts }) => (
     <Menu secondary pointing>
@@ -38,8 +38,11 @@ TopNavigation.propTypes = {
 
 function mapStateToProps(state) {
     return {
-        user.state.user
-    }
+        user: state.user,
+        hasGifts: allGiftsSelector(state).length > 0
+    };
 }
 
-export default connect(mapStateToProps, { logout: actions.logout })(TopNavigation);
+export default connect(mapStateToProps, { logout: actions.logout })(
+    TopNavigation
+);
