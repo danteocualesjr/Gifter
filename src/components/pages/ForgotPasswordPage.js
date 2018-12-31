@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { Message } from 'semantic-ui-react';
 import ForgotPassWordForm from '../forms/ForgotPasswordForm';
+import { resetPasswordRequest } from '../../actions/auth';
 
 class ForgotPasswordPage extends Component {
     state= {
