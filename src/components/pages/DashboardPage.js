@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import ConfirmEmailMessage from '../messages/ConfirmEmailMessage';
 import { allGiftsSelector } from '../../reducers/gifts';
 import AddGiftCtA from '../ctas/AddBookCtA';
+import { fetchGifts } from '../../actions/gifts';
 
 const DashboardPage = ({ isConfirmed, gifts }) => {
     return (
