@@ -7,9 +7,17 @@ import gravatarUrl from 'gravatar-url';
 import * as actions from '../../actions/auth';
 import { allGiftSelector } from '../../reducers/gifts';
 
-const TopNavigation = ({ user, logout }) => (
+const TopNavigation = ({ user, logout, hasGifts }) => (
     <Menu secondary pointing>
-        <Menu.Item as={Link} to="/dashboard">Dashboard</Menu.Item>
+        <Menu.Item as={Link} to="/dashboard">
+            Dashboard
+        </Menu.Item>
+        {hasGifts && (
+            <Menu.Item as={Link} to="/gifts/new">
+                Add New Gift
+            </Menu.Item>
+        )}
+
         <Menu.Menu position="right">
             <Dropdown trigger={<Image avatar src={gravatarUrl(user.email)} />}>
                 <Dropdown.Menu>
