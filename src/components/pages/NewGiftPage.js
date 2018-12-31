@@ -12,7 +12,14 @@ class NewGiftPage extends Component {
         gift: null
     }
 
-    onGiftSelect = gift => this.setState({ gift });
+    onGiftSelect = gift => {
+        this.setState({ gift });
+        axios
+            .get(`/api/gifts/fetchPages?goodreadsId=${book.goodreadsId}`)
+            .then(res => res.data.pages)
+            .then(pages => this.setState({ gift: { ...gift, pages } }));
+    };
+
 
     render() {
         return (
