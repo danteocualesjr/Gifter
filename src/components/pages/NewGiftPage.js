@@ -46,4 +46,4 @@ NewGiftPage.propTypes = {
     }).isRequired
 };
 
-export default NewGiftPage;
+export default connect(null, { createGift })(NewGiftPage);
