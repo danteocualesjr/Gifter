@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { validateToken } from './actions/auth';
 
 export default {
     user: {
@@ -15,5 +14,10 @@ export default {
             axios.post("/api/auth/reset_password_request", { email }),
         validateToken: token => axios.post("/api/auth/validate_token", { token }),
         resetPassword: data => axios.post('/api/auth/reset_password', { data })
+    },
+    gifts: {
+        fetchAll: () => axios.get('/api/gifts').then(res => res.data.gifts),
+        create: gift => 
+            axios.post('api/gifts', { gift }).then(res => res.data.gift)
     }
 };
