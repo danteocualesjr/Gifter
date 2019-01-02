@@ -5,16 +5,16 @@ import SignupForm from '../forms/SignupForm';
 import { signup } from '../../actions/user';
 
 class SignupPage extends Component {
-submit = data =>
-    this.props.signup(data).then(() => this.props.history.push("/dashboard"));
+    submit = data =>
+        this.props.signup(data).then(() => this.props.history.push("/dashboard"));
 
-    render() {
-        return(
-            <div>
-                <SignupForm submit={this.submit} />
-            </div>
-        );
-    }
+        render() {
+            return(
+                <div>
+                    <SignupForm submit={this.submit} />
+                </div>
+            );
+        }
 }
 
 SignupPage.propTypes = {
