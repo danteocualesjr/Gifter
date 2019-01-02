@@ -1,8 +1,13 @@
 import { createSelector } from 'reselect';
+import { GIFTS_FETCHED, GIFT_CREATED } from '../types';
 
 export default function gifts(state = {}, action = {}) {
     switch(action.type) {
-        default: return state;
+        case GIFTS_FETCHED:
+        case GIFT_CREATED:
+            return { ...state, ...action.data.entities.gifts };
+        default: 
+            return state;
     }
 }
 
