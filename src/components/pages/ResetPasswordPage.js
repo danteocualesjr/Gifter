@@ -30,7 +30,8 @@ class ResetPasswordPage extends Component {
         return (
             <div>
                 { loading && <Message>Loading</Message>}
-                { !loading && success && <ResetPasswordForm submit={this.submit} token={token} />}
+                { !loading && 
+                success && <ResetPasswordForm submit={this.submit} token={token} />}
                 { !loading && !success && <Message>Invalid Token</Message>}
             </div>
         );
@@ -50,4 +51,6 @@ ResetPasswordPage.propTypes = {
     }).isRequired
 };
 
-export default connect(null, { validateToken, resetPassword })(ResetPasswordPage);
+export default connect(null, { validateToken, resetPassword })(
+    ResetPasswordPage
+);
