@@ -30,9 +30,20 @@ class NewGiftPage extends Component {
             <Segment>
                 <h1>Add new gift</h1>
                 <SearchGiftForm onGiftSelect={this.onGiftSelect} />
+
+                {this.state.gift && (
+                    <GiftForm submit={this.addGift} gift={this.state.gift} />
+                )}
             </Segment>
-        )
+        );
     }
 }
+
+NewGiftPage.propTypes = {
+    createGift: PropTypes.func.isRequired,
+    history: propTypes.shape({
+        push: PropTypes.func.isRequired
+    }).isRequired
+};
 
 export default NewGiftPage;
